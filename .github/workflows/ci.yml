@@ -25,9 +25,8 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Lint with flake8
-        # El flag --exit-zero permite que el pipeline siga aunque haya errores de estilo
+        # --exit-zero evita que el pipeline falle por espacios de más
         run: flake8 . --count --exit-zero --max-line-length=127 --statistics
 
       - name: Run tests
-        # Ejecutamos los tests ignorando advertencias para asegurar el éxito
-        run: pytest --disable-warnings
+        run: pytest
