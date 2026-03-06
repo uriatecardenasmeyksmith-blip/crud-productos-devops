@@ -1,31 +1,15 @@
-# CRUD de Productos
+# CRUD de Productos - Proyecto DevOps
 
-Este proyecto proporciona una implementación simple de CRUD (Create, Read, Update, Delete) para manejar productos almacenados en un archivo JSON.
+## 📋 Descripción
+[cite_start]Este proyecto implementa un sistema CRUD (Create, Read, Update, Delete) para gestionar productos en un archivo JSON[cite: 3, 31].
 
-## Estructura del proyecto
+## ⚙️ Pipeline CI/CD
+[cite_start]Se configuró un pipeline en GitHub Actions que realiza[cite: 5, 32]:
+1. [cite_start]**Linter**: Verificación de estilo con Flake8[cite: 24].
+2. [cite_start]**Tests**: Pruebas unitarias automáticas con Pytest[cite: 23].
+3. [cite_start]**Build**: Simulación de preparación de artefactos[cite: 10].
 
-- `crud.py` - Lógica del programa y CLI simple.
-- `products.json` - Archivo donde se guardan los datos de los productos.
-- `requirements.txt` - Dependencias del proyecto.
-- `README.md` - Documentación.
-- `tests/` - Carpeta para pruebas.
-- `tests/test_crud.py` - Pruebas unitarias para la lógica CRUD.
-
-## Ejecución
-
-```bash
-python crud.py create --name "Producto" --price 9.99
-python crud.py read 1
-python crud.py update 1 --price 12.34
-python crud.py delete 1
-```
-
-## Pruebas
-
-```bash
-python -m pytest tests/test_crud.py
-```
-
-## Requisitos
-
-Este proyecto utiliza únicamente la biblioteca estándar de Python, por lo que no se requieren paquetes adicionales. Sin embargo, mantenemos el archivo `requirements.txt` para posibles futuras dependencias.
+## 🚀 Ejecución
+Para probarlo localmente:
+`pip install -r requirements.txt`
+`pytest`
